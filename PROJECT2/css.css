@@ -1,0 +1,97 @@
+:root{
+    --purple:rgb(123,31,162);
+    --violet:rgb(103,58,183);
+    --pink:rgb(244,143,177);
+}
+body{
+    background-color: rgb(10, 10, 10);
+    margin: 0px;
+    overflow: hidden;
+    color: white;
+    place-items: center;
+}
+@keyframes background-pan {
+    from{
+        background-position: 0% center;
+    }
+    to{
+        background-position: -200% center;
+    }
+}
+@keyframes rotate {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes rotate1 {
+    from{
+        transform:translateY(-100%);;
+        opacity: 0;
+    }
+    to{
+        transform:translateY(0%);;
+        opacity: 1;
+    }
+    
+}
+H1{
+    color:white;
+    font-family:"Rubik",sans-serif;
+    font-size: clamp(2em,2vw,4em);
+    font-weight: 200;
+    margin: 0px;
+    padding: 20px;
+    animation: background-pan 3s linear infinite;
+    background:linear-gradient(to right,var(--purple),var(--violet),var(--pink),var(--purple));
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    text-align: center;
+    animation: rotate 10s infinite;
+
+}
+.star{
+    position:relative;
+    display: inline-block;
+}
+.word{
+    align-items: end;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    margin: 2%;
+    padding: 3%;
+    justify-content: center;
+    box-shadow: 3px 3px 5px blueviolet;
+    top:25%;
+    animation: rotate 5s ;
+}
+.word:hover{
+    width: 35%;
+    height: 35%;
+    position: absolute;
+    margin: 2%;
+    padding: 3%;
+    justify-content: center;
+    box-shadow: 3px 3px 5px blueviolet;
+    top:25%;
+    font-size: large;
+
+}
+.image{
+   
+    text-align: right;
+    margin:2%;
+    padding: 3%;
+    animation: rotate1 5s ;
+   
+}
+.words{
+
+    margin:2%;
+}
